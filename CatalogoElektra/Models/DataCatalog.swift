@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct DataCatalog: Decodable{
+    let advertencia: String
+    let codigo: String
+    let folio: String
+    let mensaje: String
+    let resultado: Resultado
+    
+    
+}

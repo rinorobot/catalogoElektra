@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Resultado: Decodable{
+    let categoria: String
+    let paginacion: Paginacion
+    let productos: [Producto]
+}

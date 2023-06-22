@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Paginacion: Decodable{
+    let pagina: Int
+    let totalPaginas: Int
+    let totalRegistros: Int
+    let totalRegistrosPorPagina: Int
+}

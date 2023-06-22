@@ -16,6 +16,15 @@
 		ACC915152A43777E00FAF1D3 /* CatalogoElektraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC915142A43777E00FAF1D3 /* CatalogoElektraTests.swift */; };
 		ACC9151F2A43777E00FAF1D3 /* CatalogoElektraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC9151E2A43777E00FAF1D3 /* CatalogoElektraUITests.swift */; };
 		ACC915212A43777E00FAF1D3 /* CatalogoElektraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC915202A43777E00FAF1D3 /* CatalogoElektraUITestsLaunchTests.swift */; };
+		ACC9152E2A437DF500FAF1D3 /* CatalogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC9152D2A437DF500FAF1D3 /* CatalogoViewController.swift */; };
+		ACC915322A4384B800FAF1D3 /* DataProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC915312A4384B800FAF1D3 /* DataProduct.swift */; };
+		ACC915352A43868800FAF1D3 /* DataCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC915342A43868800FAF1D3 /* DataCatalog.swift */; };
+		ACC915372A43873200FAF1D3 /* Resultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC915362A43873200FAF1D3 /* Resultado.swift */; };
+		ACC915392A4387C300FAF1D3 /* Paginacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC915382A4387C300FAF1D3 /* Paginacion.swift */; };
+		ACC9153B2A43880F00FAF1D3 /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC9153A2A43880F00FAF1D3 /* Producto.swift */; };
+		ACC9153D2A4388FB00FAF1D3 /* AbonosSemanale.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC9153C2A4388FB00FAF1D3 /* AbonosSemanale.swift */; };
+		ACC915442A43B79F00FAF1D3 /* CellProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC915422A43B79F00FAF1D3 /* CellProductTableViewCell.swift */; };
+		ACC915452A43B79F00FAF1D3 /* CellProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC915432A43B79F00FAF1D3 /* CellProductTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		ACC9151A2A43777E00FAF1D3 /* CatalogoElektraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogoElektraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC9151E2A43777E00FAF1D3 /* CatalogoElektraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogoElektraUITests.swift; sourceTree = "<group>"; };
 		ACC915202A43777E00FAF1D3 /* CatalogoElektraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogoElektraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ACC9152D2A437DF500FAF1D3 /* CatalogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogoViewController.swift; sourceTree = "<group>"; };
+		ACC915312A4384B800FAF1D3 /* DataProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProduct.swift; sourceTree = "<group>"; };
+		ACC915342A43868800FAF1D3 /* DataCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCatalog.swift; sourceTree = "<group>"; };
+		ACC915362A43873200FAF1D3 /* Resultado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resultado.swift; sourceTree = "<group>"; };
+		ACC915382A4387C300FAF1D3 /* Paginacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginacion.swift; sourceTree = "<group>"; };
+		ACC9153A2A43880F00FAF1D3 /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		ACC9153C2A4388FB00FAF1D3 /* AbonosSemanale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbonosSemanale.swift; sourceTree = "<group>"; };
+		ACC915422A43B79F00FAF1D3 /* CellProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProductTableViewCell.swift; sourceTree = "<group>"; };
+		ACC915432A43B79F00FAF1D3 /* CellProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellProductTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,7 @@
 		ACC914FC2A43777C00FAF1D3 /* CatalogoElektra */ = {
 			isa = PBXGroup;
 			children = (
+				ACC915332A43866A00FAF1D3 /* Models */,
 				ACC914FD2A43777C00FAF1D3 /* AppDelegate.swift */,
 				ACC914FF2A43777C00FAF1D3 /* SceneDelegate.swift */,
 				ACC915012A43777C00FAF1D3 /* ViewController.swift */,
@@ -106,6 +125,10 @@
 				ACC915062A43777E00FAF1D3 /* Assets.xcassets */,
 				ACC915082A43777E00FAF1D3 /* LaunchScreen.storyboard */,
 				ACC9150B2A43777E00FAF1D3 /* Info.plist */,
+				ACC9152D2A437DF500FAF1D3 /* CatalogoViewController.swift */,
+				ACC915312A4384B800FAF1D3 /* DataProduct.swift */,
+				ACC915422A43B79F00FAF1D3 /* CellProductTableViewCell.swift */,
+				ACC915432A43B79F00FAF1D3 /* CellProductTableViewCell.xib */,
 			);
 			path = CatalogoElektra;
 			sourceTree = "<group>";
@@ -125,6 +148,18 @@
 				ACC915202A43777E00FAF1D3 /* CatalogoElektraUITestsLaunchTests.swift */,
 			);
 			path = CatalogoElektraUITests;
+			sourceTree = "<group>";
+		};
+		ACC915332A43866A00FAF1D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACC915342A43868800FAF1D3 /* DataCatalog.swift */,
+				ACC915362A43873200FAF1D3 /* Resultado.swift */,
+				ACC915382A4387C300FAF1D3 /* Paginacion.swift */,
+				ACC9153A2A43880F00FAF1D3 /* Producto.swift */,
+				ACC9153C2A4388FB00FAF1D3 /* AbonosSemanale.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC9150A2A43777E00FAF1D3 /* LaunchScreen.storyboard in Resources */,
+				ACC915452A43B79F00FAF1D3 /* CellProductTableViewCell.xib in Resources */,
 				ACC915072A43777E00FAF1D3 /* Assets.xcassets in Resources */,
 				ACC915052A43777C00FAF1D3 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC9152E2A437DF500FAF1D3 /* CatalogoViewController.swift in Sources */,
 				ACC915022A43777C00FAF1D3 /* ViewController.swift in Sources */,
+				ACC915392A4387C300FAF1D3 /* Paginacion.swift in Sources */,
+				ACC9153D2A4388FB00FAF1D3 /* AbonosSemanale.swift in Sources */,
+				ACC915322A4384B800FAF1D3 /* DataProduct.swift in Sources */,
 				ACC914FE2A43777C00FAF1D3 /* AppDelegate.swift in Sources */,
+				ACC915372A43873200FAF1D3 /* Resultado.swift in Sources */,
+				ACC9153B2A43880F00FAF1D3 /* Producto.swift in Sources */,
+				ACC915442A43B79F00FAF1D3 /* CellProductTableViewCell.swift in Sources */,
 				ACC915002A43777C00FAF1D3 /* SceneDelegate.swift in Sources */,
+				ACC915352A43868800FAF1D3 /* DataCatalog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
