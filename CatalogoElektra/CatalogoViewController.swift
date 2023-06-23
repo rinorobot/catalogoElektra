@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Network
 class CatalogoViewController: UIViewController {
     
     //MARK: - IBOutlets
@@ -15,11 +15,12 @@ class CatalogoViewController: UIViewController {
     @IBOutlet weak var tableViewCatalog: UITableView!
     var catalog = DataCatalog(advertencia: "", codigo: "", folio: "", mensaje: "", resultado: Resultado(categoria: "", paginacion: Paginacion(pagina: 0, totalPaginas: 0, totalRegistros: 0, totalRegistrosPorPagina: 0), productos: [Producto]()))
     
+    
     var a_i = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var _ = InternetStatus.instance
         a_i.startAnimating()
         self.view.addSubview(a_i)
 
@@ -37,43 +38,54 @@ class CatalogoViewController: UIViewController {
     }
     
     func fetchData(){
-        guard let url = URL(string: "http://alb-dev-ekt-875108740.us-east-1.elb.amazonaws.com/sapp/productos/plp/1/ad2fdd4bbaec4d15aa610a884f02c91a") else {
-            fatalError("URL guard stmt failed")
-        }
         
-        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-            //HANDLE DECODING HERE
+        if InternetStatus.instance.internetType != .none {
             
-            if let data = data {
-                guard let catalogAPI = try? JSONDecoder().decode(DataCatalog.self, from: data) else {
-                    fatalError("Error decoding data \(error!)")
+            guard let url = URL(string: "http://alb-dev-ekt-875108740.us-east-1.elb.amazonaws.com/sapp/productos/plp/1/ad2fdd4bbaec4d15aa610a884f02c91a") else {
+                fatalError("URL guard stmt failed")
+            }
+            
+            URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+                //HANDLE DECODING HERE
+                
+                if let data = data {
+                    guard let catalogAPI = try? JSONDecoder().decode(DataCatalog.self, from: data) else {
+                        fatalError("Error decoding data \(error!)")
+                    }
+                    
+                    //   var catalog = [DataCatalog]()
+                    
+                    //    catalog.append(catalogAPI)
+                    
+                    
+                    
+                    
+                    
+                    self?.catalog = catalogAPI
+                    
+                    
+                    
+                }
+                DispatchQueue.main.async {
+                    self?.a_i.stopAnimating()
+                    
+                    self?.tableViewCatalog.reloadData()
                 }
                 
-             //   var catalog = [DataCatalog]()
-                
-            //    catalog.append(catalogAPI)
-                
-                
-              
-              
-                
-                self?.catalog = catalogAPI
-                
-                
-                
+            }.resume()
+            
+            
+            tableViewCatalog.register(UINib(nibName: "CellProductTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+            
+        }else{
+            let alert = UIAlertController(title: "Atención", message: "Se requiere conexión a internet", preferredStyle: .alert)
+            let boton1 = UIAlertAction(title: "OK", style: .default) { alert in
+               
             }
-            DispatchQueue.main.async {
-                self?.a_i.stopAnimating()
-              
-                self?.tableViewCatalog.reloadData()
-                       }
-           
-        }.resume()
-        
-        
-        tableViewCatalog.register(UINib(nibName: "CellProductTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
-        
+            
+            alert.addAction(boton1)
+            self.present(alert, animated:true)
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
