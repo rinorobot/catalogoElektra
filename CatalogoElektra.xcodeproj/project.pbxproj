@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACA39FBA2A461D000019CDBB /* InternetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA39FB92A461D000019CDBB /* InternetStatus.swift */; };
 		ACC914FE2A43777C00FAF1D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC914FD2A43777C00FAF1D3 /* AppDelegate.swift */; };
 		ACC915002A43777C00FAF1D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC914FF2A43777C00FAF1D3 /* SceneDelegate.swift */; };
 		ACC915022A43777C00FAF1D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC915012A43777C00FAF1D3 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ACA39FB92A461D000019CDBB /* InternetStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetStatus.swift; sourceTree = "<group>"; };
 		ACC914FA2A43777C00FAF1D3 /* CatalogoElektra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalogoElektra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC914FD2A43777C00FAF1D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC914FF2A43777C00FAF1D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACA39FB82A461CD20019CDBB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ACA39FB92A461D000019CDBB /* InternetStatus.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		ACC914F12A43777C00FAF1D3 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		ACC914FC2A43777C00FAF1D3 /* CatalogoElektra */ = {
 			isa = PBXGroup;
 			children = (
+				ACA39FB82A461CD20019CDBB /* Network */,
 				ACC915332A43866A00FAF1D3 /* Models */,
 				ACC914FD2A43777C00FAF1D3 /* AppDelegate.swift */,
 				ACC914FF2A43777C00FAF1D3 /* SceneDelegate.swift */,
@@ -298,6 +309,7 @@
 				ACC915022A43777C00FAF1D3 /* ViewController.swift in Sources */,
 				ACC915392A4387C300FAF1D3 /* Paginacion.swift in Sources */,
 				ACC9153D2A4388FB00FAF1D3 /* AbonosSemanale.swift in Sources */,
+				ACA39FBA2A461D000019CDBB /* InternetStatus.swift in Sources */,
 				ACC915322A4384B800FAF1D3 /* DataProduct.swift in Sources */,
 				ACC914FE2A43777C00FAF1D3 /* AppDelegate.swift in Sources */,
 				ACC915372A43873200FAF1D3 /* Resultado.swift in Sources */,
